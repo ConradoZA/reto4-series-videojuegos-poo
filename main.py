@@ -23,7 +23,14 @@ if __name__ == '__main__':
     videojuegos[random.randint(0, 4)].prestar()
     videojuegos[random.randint(0, 4)].prestar()
 
-    # Cuenta cuantos Series y Videojuegos hay entregados. Al contarlos, devuélvelos.
+    print(f"Series prestadas:")
+    for serie in series:
+        if serie.estaPrestado(): print(f"- {serie.titulo}")
+
+    print()
+    print("Videojuegos prestados:")
+    for game in videojuegos:
+        if game.estaPrestado(): print(f"- {game.titulo}")
 
 
     def make_compare(array: list) -> object:
@@ -39,6 +46,7 @@ if __name__ == '__main__':
                 i += 1
         return longest
 
+    print()
     print("Esta es la serie con más temporadas:")
     print(make_compare(series))
     print()
