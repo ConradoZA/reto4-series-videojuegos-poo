@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import random
 
 from functions.count_and_compare import make_compare, count_and_list
